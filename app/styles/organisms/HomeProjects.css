@@ -1,0 +1,100 @@
+.HomeProjects {
+   @apply bg-contain bg-center pb-[2rem] py-[4rem] relative;
+   background: linear-gradient(0deg, #ffffff 39%, #f24822 39%);
+   @screen laptop {
+      @apply flex flex-wrap justify-around;
+      padding-top: calc(10rem * var(--scale));
+      background: transparent;
+
+      &::after {
+         @apply absolute bg-primary bg-blend-multiply;
+         content: "";
+         top: 0;
+         height: 75%;
+         width: 100%;
+         background-image: url("/images/texture.png");
+         mix-blend-mode: multiply;
+      }
+   }
+
+   .HomeProjects-title {
+      @apply mb-[1.5rem];
+      h2,
+      h3 {
+         @apply text-white;
+      }
+   }
+
+   &-container {
+      @apply text-center mt-[1.4rem] w-[80%];
+
+      &-list {
+         @apply mt-[2.9rem] relative;
+         @media screen(laptop) {
+            margin-top: calc(1.5rem * var(--scale));
+         }
+
+         &-img {
+            @apply relative cursor-pointer;
+            border-radius: 0.5rem;
+
+            @media screen(laptop) {
+               border-radius: 1rem;
+            }
+         }
+
+         &-icon {
+            @apply absolute bg-secundary rounded-full flex items-center justify-center text-white;
+            top: 0.7rem;
+            right: 0.7rem;
+            width: 2.4rem;
+            height: 2.4rem;
+
+            @media screen(laptop) {
+               top: calc(1.7rem * var(--scale));
+               right: calc(1.7rem * var(--scale));
+               width: calc(4rem * var(--scale));
+               height: calc(4rem * var(--scale));
+            }
+         }
+      }
+   }
+
+   &-arrow {
+      @apply rounded-r-xl bg-white text-[1rem] flex items-center justify-center absolute cursor-pointer;
+      width: 2.5rem;
+      height: 8rem;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      &.swiper-button-disabled {
+         @apply bg-gris-200 text-gris-100  cursor-auto;
+      }
+      @media screen(laptop) {
+         @apply rounded-r-3xl;
+         width: calc(3rem * var(--scale));
+         font-size: calc(1.3rem * var(--scale));
+         height: calc(11rem * var(--scale));
+      }
+      &.isDisplayBtn {
+         @media screen(tabletxl) {
+            @apply hidden;
+         }
+      }
+   }
+
+   &-prev {
+      transform: translateY(-50%) rotate(180deg);
+      left: -2.4rem;
+      @media screen(laptop) {
+         left: calc(-3rem * var(--scale));
+      }
+   }
+   &-next {
+      right: -2.4rem;
+      @media screen(laptop) {
+         right: calc(-3rem * var(--scale));
+      }
+   }
+}

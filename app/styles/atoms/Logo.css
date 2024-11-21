@@ -1,0 +1,8 @@
+.logoCont {
+   @apply cursor-pointer;
+   img {
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+   }
+}

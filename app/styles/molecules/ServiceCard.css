@@ -1,0 +1,187 @@
+.serviceCard {
+   @apply rounded-lg relative p-[2rem] pb-[2rem]  mx-auto bg-primary text-white;
+   box-shadow: 0px 2.5px 32px 0px rgba(64, 64, 64, 0.1);
+
+   &::before {
+      @apply w-[90%] h-[0.5rem] rounded-b-full absolute left-[50%] translate-x-[-50%]  top-0 bg-secundary;
+      content: "";
+   }
+   &__thumb {
+      @apply relative rounded-xl  h-[15rem] mb-2;
+      img {
+         @apply w-full h-full object-cover;
+      }
+      &__icon {
+         @apply absolute w-[4.5rem] h-[4.5rem] bottom-[-2rem] left-[50%] translate-x-[-50%];
+         img {
+            @apply w-full h-full object-cover;
+         }
+      }
+   }
+
+   &__description {
+      @apply text-center font-primary;
+      transition: max-height 0.6s ease-in-out;
+      min-height: 11rem;
+      max-height: 64rem;
+      &-title {
+         @apply font-[700] pr-5 text-[1.67rem] pt-[1.2rem] pb-[0.4rem];
+      }
+
+      &-text {
+         @apply mx-auto;
+         display: block;
+         width: 84%;
+         overflow: hidden;
+         max-height: 62rem;
+         transition: max-height 0.6s ease-in-out;
+
+         p {
+            @apply leading-[2.4rem] font-primary text-[1.5rem] font-[300];
+         }
+
+         ul {
+            @apply leading-[2.4rem] text-[1.5rem] ml-5 mt-3 font-[400];
+            list-style: disc;
+
+            li {
+               @apply w-fit mx-auto;
+            }
+         }
+      }
+
+      &-btn {
+         @apply block w-fit mx-auto my-[1.5rem] underline font-[300];
+         text-decoration-thickness: 0.7px;
+         opacity: 1;
+         transition: opacity 0.8s ease-in-out;
+      }
+   }
+
+   &__btnSee {
+      @apply absolute h-[3rem] block mx-auto  bottom-[0rem] font-[400] translate-x-[-50%] left-[50%];
+      &-text {
+         z-index: 10;
+
+         transition: opacity 0.8s ease;
+      }
+      &-thumbIcon {
+         @apply w-[4.5rem] relative h-[4.5rem] pb-[1rem] rounded-full mx-auto  bg-primary;
+         @apply flex items-end justify-center font-light;
+         transform: translateY(-50%);
+         transition: all 0.6s ease;
+         z-index: -1;
+      }
+   }
+
+   @screen tablet {
+      @apply max-w-[80%];
+      &__thumb {
+         @apply h-[20rem];
+      }
+   }
+
+   @screen tabletxl {
+      @apply max-w-[45%];
+      &__btnSee {
+         @apply hidden;
+      }
+   }
+
+   @screen laptop {
+      padding: calc(2.8rem * var(--scale));
+      padding-bottom: calc(0.8rem * var(--scale));
+      width: calc(37rem * var(--scale));
+      @apply transition-all;
+      transition-duration: 0.5s;
+      &:hover {
+         @apply bg-secundary;
+         &::before {
+            @apply bg-primary;
+         }
+      }
+
+      &::before {
+         @apply transition-all;
+         transition-duration: 0.5s;
+         @apply w-[85%];
+         height: calc(0.82rem * var(--scale));
+      }
+      &__thumb {
+         height: calc(13.5rem * var(--scale));
+         &__icon {
+            width: calc(5.5rem * var(--scale));
+            height: calc(5.5rem * var(--scale));
+            bottom: calc(-2.5rem * var(--scale));
+         }
+      }
+
+      &__description {
+         @apply text-center;
+         max-height: calc(43.4rem * var(--scale));
+         &-title {
+            @apply pr-0 pt-[1.2rem] pb-[0.4rem];
+            font-size: calc(1.85rem * var(--scale));
+            padding-top: calc(2.1rem * var(--scale));
+            padding-bottom: calc(0.8rem * var(--scale));
+         }
+
+         &-text {
+            width: 100%;
+            @apply mx-0 p-0;
+            overflow: hidden;
+            p {
+               @apply leading-[160%] font-[200] font-primary;
+               font-size: calc(1.8rem * var(--scale));
+            }
+
+            ul {
+               @apply leading-[160%] font-[300];
+               font-size: calc(1.8rem * var(--scale));
+               margin-top: calc(1.2rem * var(--scale));
+               margin-left: calc(1rem * var(--scale));
+               li {
+                  @apply w-fit mx-auto;
+               }
+            }
+         }
+
+         &-btn {
+            @apply block w-fit mx-auto my-[1.5rem] underline font-[300];
+            margin: calc(2rem * var(--scale)) auto;
+            font-size: calc(1.9rem * var(--scale));
+            opacity: 1;
+         }
+      }
+   }
+}
+
+.deploy {
+   max-height: 11rem;
+   @screen tabletxl {
+      max-height: 62rem;
+   }
+}
+.deploytext {
+   max-height: 5rem;
+
+   @screen tabletxl {
+      max-height: 64rem;
+   }
+}
+
+.rotar {
+   img {
+      transform: scaleY(-100%);
+   }
+}
+
+.invisible2 {
+   @apply opacity-0;
+   transition: opacity 0.6s ease-in-out;
+   pointer-events: none;
+   @screen tabletxl {
+      @apply opacity-100;
+      pointer-events: auto;
+   }
+}

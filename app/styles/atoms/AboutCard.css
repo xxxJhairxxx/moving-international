@@ -1,0 +1,36 @@
+.aboutCard {
+   @apply flex font-primary gap-[1rem] my-[1.5rem];
+   &__thumb {
+      @apply w-[4rem] h-[4rem];
+      img {
+         @apply object-cover w-full h-full;
+      }
+   }
+   &__description {
+      &-title {
+         @apply font-[400] text-[1.43rem];
+      }
+      &-text {
+         @apply text-gris-300;
+         letter-spacing: 0.95px;
+      }
+   }
+
+   @screen laptop {
+      margin-top: calc(1.5rem * var(--scale));
+      margin-bottom: calc(3rem * var(--scale));
+      gap: calc(1.5rem * var(--scale));
+      &__thumb {
+         width: calc(5.8rem * var(--scale));
+         height: calc(5.9rem * var(--scale));
+      }
+      &__description {
+         &-title {
+            font-size: calc(1.9rem * var(--scale));
+         }
+         &-text {
+            font-size: calc(1.9rem * var(--scale));
+         }
+      }
+   }
+}

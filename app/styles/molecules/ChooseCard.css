@@ -1,0 +1,88 @@
+.chooseCard {
+   @apply bg-white flex font-primary gap-5 rounded-lg py-[2rem] pl-[1.7rem] pr-[1.8rem];
+   width: 100%;
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+   &__thumb {
+      @apply flex items-center mb-[3rem]  justify-center bg-secundary w-[5.7rem] h-[5.7rem] rounded-full;
+      img {
+         @apply w-[3rem];
+      }
+   }
+   &__description {
+      @apply w-[23rem];
+      &-title {
+         @apply text-[1.66rem] font-[400] mb-4;
+      }
+      &-text {
+         @apply text-[1.35rem] text-gris-300;
+         font-style: normal;
+         font-weight: 300;
+         line-height: 167%;
+      }
+   }
+   @screen tablet {
+      @apply flex-row relative items-start text-center rounded-xl;
+      gap: 0.5rem;
+      height: fit-content;
+      width: 31rem;
+      padding-right: 1rem;
+   }
+   @screen tabletxl {
+      @apply flex-row relative items-start text-center rounded-xl;
+      gap: 0.5rem;
+      height: fit-content;
+      width: 30rem;
+      padding-right: 1rem;
+   }
+   @screen laptop {
+      z-index: 100;
+      @apply flex-row relative items-start text-center rounded-xl;
+      width: calc(39.5rem * var(--scale));
+      height: fit-content;
+      padding: calc(2rem * var(--scale)) calc(2.09rem * var(--scale));
+
+      gap: calc(1.5rem * var(--scale));
+      margin-bottom: calc(0rem * var(--scale));
+
+      &__thumb {
+         @apply flex items-center justify-center rounded-full;
+         width: calc(5.5rem * var(--scale));
+         height: calc(5.5rem * var(--scale));
+         margin-bottom: calc(3rem * var(--scale));
+         img {
+            width: calc(3.5rem * var(--scale));
+         }
+      }
+      &__description {
+         width: calc(28rem * var(--scale));
+         &-title {
+            @apply text-left lowercase;
+            margin-bottom: calc(0.8rem * var(--scale));
+            font-size: calc(2.05rem * var(--scale));
+            line-height: 100%;
+            &::first-letter {
+               @apply uppercase;
+            }
+         }
+         &-text {
+            @apply text-left;
+            font-style: normal;
+            font-size: calc(1.7rem * var(--scale));
+            font-weight: 300;
+            line-height: 160%;
+         }
+      }
+
+      &:before {
+         @apply absolute text-primary flex items-center justify-center font-[700] font-primary right-0 bottom-0;
+         counter-increment: contador;
+         opacity: 10%;
+         content: counter(contador, decimal-leading-zero);
+         font-size: calc(5.2rem * var(--scale));
+         width: calc(6rem * var(--scale));
+         height: calc(5rem * var(--scale));
+
+         z-index: 102;
+      }
+   }
+}

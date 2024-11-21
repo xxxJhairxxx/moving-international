@@ -1,0 +1,45 @@
+.button {
+   @apply rounded-[0.4rem] block text-[1.5rem] w-fit bg-white text-secundary font-[600] px-[4.2rem] py-[0.2rem]  cursor-pointer justify-center;
+   transition: all 0.3s ease;
+   white-space: nowrap;
+
+   &:hover {
+      @apply text-white bg-primary;
+   }
+
+   & > div > i,
+   & > i {
+      @apply text-[1rem] ml-2 transition-all;
+   }
+
+   @screen laptop {
+      @apply flex items-center px-0;
+
+      min-width: calc(19rem * var(--scale));
+      font-size: calc(1.9rem * var(--scale));
+      height: calc(4.5rem * var(--scale));
+
+      &:hover {
+         @apply bg-white text-secundary;
+         i {
+            @apply translate-x-[50%];
+         }
+      }
+
+      & > div {
+         @apply flex items-center m-0 p-0;
+         gap: calc(0.5rem * var(--scale));
+
+         i {
+            font-size: calc(1.2rem * var(--scale));
+            transition: transform 0.4s ease-out;
+            margin-top: calc(0.4rem * var(--scale));
+         }
+      }
+      &:hover > div {
+         i {
+            @apply translate-x-[70%];
+         }
+      }
+   }
+}

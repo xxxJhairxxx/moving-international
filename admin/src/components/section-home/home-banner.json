@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_section_home_home_banners",
+  "info": {
+    "displayName": "home_banner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "titlepost": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "bg_video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "subtitle": {
+      "type": "richtext"
+    }
+  }
+}

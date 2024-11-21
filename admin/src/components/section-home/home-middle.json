@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_section_home_home_middles",
+  "info": {
+    "displayName": "home_middle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

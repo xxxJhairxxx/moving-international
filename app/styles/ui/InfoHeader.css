@@ -1,0 +1,42 @@
+.infoHeader {
+   @apply hidden;
+
+   @screen laptop {
+      @apply block bg-primary;
+      padding-top: calc(1rem * var(--scale));
+      padding-bottom: calc(1rem * var(--scale));
+      height: calc(5rem * var(--scale));
+      .infoHeader-container {
+         @apply flex justify-between text-white h-fit items-center font-primary;
+      }
+
+      &-info {
+         @apply flex justify-end items-center;
+         gap: calc(2rem * var(--scale));
+
+         li {
+            @apply font-[300];
+            font-size: calc(1.8rem * var(--scale));
+            a {
+               @apply inline-block;
+            }
+            i {
+               @apply top-[2px] inline-block relative;
+               font-size: calc(2.1rem * var(--scale));
+               margin-right: calc(1rem * var(--scale));
+            }
+            &:last-child {
+               @apply font-[600] text-white;
+            }
+         }
+      }
+   }
+   .socials-network {
+      a {
+         display: flex;
+         i {
+            font-size: calc(2.3rem * var(--scale));
+         }
+      }
+   }
+}

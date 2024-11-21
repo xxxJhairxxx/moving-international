@@ -1,0 +1,28 @@
+.skillsCard {
+   @apply bg-white h-[8.1rem] w-[16rem] gap-1 flex flex-col items-center justify-center;
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+   border-radius: 2.69px;
+   &__thumb {
+      @apply h-[3.5rem] w-[3.93rem];
+      img {
+         @apply w-full h-full object-contain;
+      }
+   }
+
+   &__title {
+      @apply text-secundary font-[500] text-[1.3rem];
+   }
+   @screen laptop {
+      width: calc(22.7rem * var(--scale));
+      height: calc(11.51rem * var(--scale));
+      gap: calc(0.4rem * var(--scale));
+
+      &__thumb {
+         @apply h-[5rem] w-[6rem];
+      }
+
+      &__title {
+         font-size: calc(1.7rem * var(--scale));
+      }
+   }
+}

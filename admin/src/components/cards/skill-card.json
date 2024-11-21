@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_cards_skill_cards",
+  "info": {
+    "displayName": "skill_card"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

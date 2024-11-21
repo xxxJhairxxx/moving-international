@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_cards_immediacy_cards",
+  "info": {
+    "displayName": "immediacy_card"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "kind": "singleType",
+  "collectionName": "multilanguages",
+  "info": {
+    "singularName": "multilanguage",
+    "pluralName": "multilanguages",
+    "displayName": "Multilanguage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "lbl_btn_contact": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "lbl_see_more": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "lbl_send": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "lbl_btn_quote": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "menu": {
+      "displayName": "menu",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.menu",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "delivered_card": {
+      "displayName": "delivered_card",
+      "type": "component",
+      "repeatable": false,
+      "component": "cards.delivered-card",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "immediacy_card": {
+      "displayName": "immediacy_card",
+      "type": "component",
+      "repeatable": false,
+      "component": "cards.immediacy-card",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_cards_delivered_cards",
+  "info": {
+    "displayName": "delivered_card"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "number": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

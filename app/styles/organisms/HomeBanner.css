@@ -1,0 +1,115 @@
+.homeBanner {
+   @apply relative flex justify-center;
+
+   height: 90vh;
+   z-index: 1;
+   &-video {
+      @apply absolute top-0 left-0 w-full h-full object-cover;
+      z-index: -1;
+   }
+   &::before {
+      @apply bg-secundary absolute mix-blend-hard-light;
+      content: "";
+      z-index: 1;
+      top: 0;
+      left: 0;
+      height: 86vh;
+      width: 100%;
+      clip-path: polygon(100% 0, 100% 86%, 50% 92%, 0 86%, 0 0);
+   }
+
+   &__container {
+      @apply relative text-white text-center font-primary leading-[3.45rem] flex flex-col justify-center;
+      height: 72vh;
+      font-size: 2.7rem;
+      z-index: 2;
+      &-subtitle {
+         @apply hidden;
+      }
+      &-title {
+         @apply font-[700] font-secundary;
+      }
+      &-titlepost {
+         @apply font-[500] mb-8 relative font-secundary;
+         &::before {
+            @apply bg-primary rounded-b-full;
+            content: "";
+            width: 7rem;
+            height: 0.3rem;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+         }
+      }
+      &-text {
+         @apply text-[1.5rem] leading-[2.4rem];
+      }
+      &-button {
+         @apply mx-auto mt-10;
+      }
+
+      &-Number {
+         @apply absolute left-0 bottom-[4rem];
+      }
+      &-Number2 {
+         @apply absolute left-0 bottom-[0rem];
+      }
+   }
+
+   /* @screen tabletxl {
+      &::before {
+         clip-path: polygon(100% 0, 100% 90%, 51% 97%, 0 90%, 0 0);
+         height: 85vh;
+      }
+   } */
+
+   @screen laptop {
+      &::before {
+         clip-path: polygon(100% 0, 100% 90%, 51% 97%, 0 90%, 0 0);
+         height: 85vh;
+         z-index: 1;
+      }
+
+      &__container {
+         @apply text-left items-start justify-end;
+         height: 69vh;
+         margin-top: 0;
+         padding-right: calc(82rem * var(--scale));
+         &-subtitle {
+            @apply block font-secundary text-primary font-[600] leading-[100%];
+            font-size: calc(1.89rem * var(--scale));
+            white-space: nowrap;
+         }
+         &-title {
+            @apply leading-[135%] font-[700];
+            font-size: calc(4.65rem * var(--scale));
+         }
+         &-titlepost {
+            @apply font-[500] mb-8 relative;
+            font-size: calc(4.3rem * var(--scale));
+            margin-top: calc(0.7rem * var(--scale));
+            margin-bottom: calc(5.5rem * var(--scale));
+            &::before {
+               @apply bg-primary rounded-b-full;
+               content: "";
+               width: calc(12.9rem * var(--scale));
+               height: calc(0.6rem * var(--scale));
+               bottom: calc(-3.7rem * var(--scale));
+               left: 0;
+               transform: translateX(0%);
+            }
+         }
+         &-text {
+            @apply text-[1.5rem] leading-[160%];
+            font-size: calc(2.05rem * var(--scale));
+            width: calc(50rem * var(--scale));
+         }
+         &-button {
+            @apply mx-0;
+            margin-top: calc(3rem * var(--scale));
+            margin-left: calc(1.7rem * var(--scale));
+         }
+      }
+   }
+}

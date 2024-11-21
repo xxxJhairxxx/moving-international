@@ -1,0 +1,43 @@
+.contact {
+   @apply relative flex items-center bg-[#0D508F] bg-opacity-50;
+
+   &::before {
+      @apply mix-blend-multiply;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 30%;
+      background-image: url("/images/bg-contact.jpg");
+      background-size: cover;
+   }
+   &__ctn {
+      @apply bg-[#Fff] text-gris-300 py-16 px-10 mx-0 w-full;
+      z-index: 20;
+   }
+
+   @screen tablet {
+      &__ctn {
+         @apply py-24;
+      }
+   }
+
+   @screen laptop {
+      @apply flex items-center;
+      padding-top: calc(10.5rem * var(--scale));
+      padding-bottom: calc(10.5rem * var(--scale));
+      &__ctn {
+         @apply bg-[#FAFAFA] text-gris-300 rounded-[2.5rem] mx-auto  w-[62%] max-w-[140rem];
+         padding-top: calc(7.7rem * var(--scale));
+         padding-bottom: calc(7.5rem * var(--scale));
+         z-index: 50;
+         &__title {
+            @apply text-center max-w-[100rem];
+            h3 {
+               @apply font-secundary font-[700];
+               padding-bottom: calc(1.5rem * var(--scale));
+            }
+         }
+      }
+   }
+}

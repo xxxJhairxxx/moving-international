@@ -1,0 +1,163 @@
+.homeChoose {
+   @apply pt-[4rem] pb-[7rem] relative font-primary;
+   z-index: 5;
+   margin-top: -2rem;
+   margin-bottom: -3.2rem;
+   &:after {
+      @apply absolute w-full h-full left-0 bg-cover bottom-0 bg-[#F9F9F9];
+
+      content: "";
+      z-index: -1;
+      clip-path: polygon(34% 0, 100% 3%, 100% 95%, 65% 97%, 0 94%, 0 3%);
+   }
+   &__container {
+      z-index: 10;
+      &__title {
+         h3,
+         h2 {
+            @apply text-left;
+         }
+      }
+      &__text {
+         @apply relative text-gris-300 text-[1.56rem] font-[300] leading-[2.32rem];
+
+         z-index: 20;
+      }
+
+      &__swiper {
+         @apply w-full;
+      }
+   }
+
+   .swiper-pagination {
+      @apply flex justify-center mx-auto mt-[0];
+      width: fit-content;
+      gap: 1.1rem;
+
+      span {
+         @apply w-[1rem] h-[1rem] rounded-full;
+         background: rgba(7, 34, 81, 0.5);
+         &.swiper-pagination-bullet-active {
+            @apply bg-secundary;
+         }
+      }
+      @screen laptop {
+         @apply hidden;
+      }
+   }
+
+   @screen tablet {
+      &__container {
+         &__title {
+            h3,
+            h2 {
+               @apply text-center;
+            }
+         }
+      }
+   }
+
+   @screen tabletxl {
+      &__container {
+         &__cards {
+            @apply w-[75%] mx-auto;
+         }
+      }
+   }
+
+   @screen laptop {
+      @apply relative;
+      padding: calc(11rem * var(--scale)) calc(21rem * var(--scale));
+      z-index: 5;
+      margin-top: calc(-3rem * var(--scale));
+      margin-bottom: calc(-5rem * var(--scale));
+      &:after {
+         @apply absolute w-full h-full left-0 bg-cover bottom-0;
+         background-image: url("/images/mascara.jpg");
+         content: "";
+         z-index: -1;
+         clip-path: polygon(34% 0, 100% 3%, 100% 95%, 65% 97%, 0 94%, 0 3%);
+      }
+
+      &__container {
+         @apply w-full;
+
+         &__title {
+            @apply max-w-[100%];
+            h3,
+            h2 {
+               @apply text-center;
+            }
+         }
+         &__text {
+            @apply text-center leading-[160%] w-[48%] mx-auto relative;
+            font-size: calc(1.9rem * var(--scale));
+            z-index: 20;
+         }
+         &__cards {
+            @apply grid  w-full;
+            grid-template-columns: 30% 40% 30%;
+            column-gap: 1%;
+            row-gap: calc(5rem * var(--scale));
+            margin: calc(5.5rem * var(--scale)) 0;
+            counter-reset: contador;
+            &-thumb {
+               @apply flex items-center relative rounded-full;
+               transform: scale(105%) translateX(2%);
+               border: 10%;
+               z-index: 11;
+               grid-row: 1 / span 2; /* Segunda fila */
+               grid-column: 2;
+               img {
+                  @apply object-cover w-full h-full;
+               }
+               &:before {
+                  @apply absolute bottom-[55%] translate-y-[50%];
+                  content: "";
+                  left: calc(-4rem * var(--scale));
+                  width: calc(5rem * var(--scale));
+                  height: calc(24rem * var(--scale));
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  background-image: url("/images/line.svg");
+                  z-index: 50;
+               }
+               &:after {
+                  @apply absolute bottom-[55%];
+                  content: "";
+                  right: calc(3rem * var(--scale));
+                  width: calc(5rem * var(--scale));
+                  height: calc(25rem * var(--scale));
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  transform: rotate(180deg) translateY(-50%);
+                  background-image: url("/images/line.svg");
+                  z-index: 20;
+               }
+            }
+         }
+
+         &__swiper {
+            @apply w-full;
+            @screen laptop {
+               height: calc(60rem * var(--scale));
+            }
+         }
+      }
+   }
+}
+
+.homeChoose_icon1 {
+   right: calc(12rem * var(--scale));
+   top: calc(-5rem * var(--scale));
+   z-index: 200;
+}
+
+.homeChoose_icon2 {
+   z-index: 200;
+
+   left: calc(8rem * var(--scale));
+   bottom: calc(3.5rem * var(--scale));
+   height: calc(16rem * var(--scale));
+   width: calc(16rem * var(--scale));
+}

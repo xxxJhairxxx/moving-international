@@ -1,0 +1,116 @@
+.switch-lang {
+   @apply overflow-hidden relative  h-[3.5rem] w-[10rem] rounded-[2.45rem] flex items-center;
+
+   border: 0.2rem solid #f24822;
+   transition: opacity 0.7s ease;
+   &__btn {
+      @apply gap-6 flex items-center justify-around leading-[1.4rem] px-[1.15rem] h-[2.55rem] bg-transparent rounded-[3.17rem];
+
+      &:before {
+         @apply h-full  rounded-[2rem] w-[55%] top-0 left-0 bg-primary  absolute;
+         content: "";
+         z-index: 2;
+         transition: transform 0.7s ease;
+      }
+      span {
+         @apply font-primary  font-semibold leading-[1] text-[1.7rem] block;
+         position: static;
+         z-index: 50;
+         transition: color 0.5s ease;
+         @apply flex items-center justify-center;
+         &:first-child {
+            @apply text-white;
+         }
+         &:last-child {
+            @apply bg-transparent text-primary;
+         }
+      }
+   }
+
+   @screen laptop {
+      @apply overflow-hidden relative  flex items-center;
+
+      border: 0.2rem solid #fff;
+      height: calc(3.5rem * var(--scale));
+      width: calc(10rem * var(--scale));
+      border-radius: calc(2.4rem * var(--scale));
+
+      &__btn {
+         @apply flex items-center justify-around leading-[1.4] bg-transparent;
+         padding: 0 calc(1.15rem * var(--scale));
+         height: calc(2.55rem * var(--scale));
+         border-radius: calc(2.4em * var(--scale));
+         gap: calc(1.5rem * var(--scale));
+         &:before {
+            @apply h-full w-[55%] top-0 left-0 bg-white  absolute;
+            border-radius: calc(1.4rem * var(--scale));
+            content: "";
+            z-index: 2;
+            transition: transform 0.7s ease;
+         }
+         span {
+            @apply font-primary font-normal leading-[1]  block;
+            position: static;
+            font-size: calc(1.7rem * var(--scale));
+
+            @apply flex items-center justify-center;
+            &:first-child {
+               @apply text-primary;
+            }
+            &:last-child {
+               @apply bg-transparent text-white;
+            }
+         }
+      }
+   }
+}
+
+/* @media screen(laptop) {
+      width: calc(11.5rem * var(--scale)); 
+      border-radius: 22.9246px;
+      height: calc(2.9rem * var(--scale));
+      border: none;
+      &__btn {
+         height: calc(2.557rem * var(--scale)) !important;
+         padding-top: calc(0.8rem * var(--scale));
+         padding-bottom: calc(0.8rem * var(--scale));
+         padding-left: calc(1.12rem * var(--scale));
+         padding-right: calc(1.12rem * var(--scale));
+          span {
+            font-size: calc(1.2398rem * var(--scale));
+         } 
+
+         &.active {
+            padding-top: calc(0.8rem * var(--scale));
+            padding-bottom: calc(0.8rem * var(--scale));
+            padding-left: calc(1.15rem * var(--scale));
+            padding-right: calc(1.15rem * var(--scale));
+            span {
+               @apply font-medium;
+            }
+         }
+      }
+   } */
+
+.enable {
+   &:before {
+      transform: translateX(85%);
+   }
+   span {
+      &:first-child {
+         @apply bg-transparent text-primary;
+      }
+      &:last-child {
+         @apply h-full text-white;
+      }
+
+      @screen laptop {
+         &:first-child {
+            @apply bg-transparent text-white;
+         }
+         &:last-child {
+            @apply h-full text-primary;
+         }
+      }
+   }
+}

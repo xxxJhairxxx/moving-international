@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_section_home_home_skills",
+  "info": {
+    "displayName": "home_skills"
+  },
+  "options": {},
+  "attributes": {
+    "skill_card": {
+      "displayName": "skill_card",
+      "type": "component",
+      "repeatable": true,
+      "component": "cards.skill-card"
+    }
+  }
+}

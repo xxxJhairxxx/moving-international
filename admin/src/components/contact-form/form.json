@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_contact_form_forms",
+  "info": {
+    "displayName": "form"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "displayName": "name",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-form.name"
+    },
+    "email": {
+      "displayName": "email",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-form.email"
+    },
+    "service": {
+      "displayName": "service",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-form.service"
+    },
+    "message": {
+      "displayName": "message",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-form.message"
+    },
+    "phone": {
+      "displayName": "phone",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-form.phone"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.socials {
+   @apply flex gap-[1rem] text-white justify-center items-start;
+
+   @screen laptop {
+      font-size: calc(2.5rem * var(--scale));
+      gap: calc(1.5rem * var(--scale));
+
+      &__items {
+         height: calc(3rem * var(--scale));
+      }
+   }
+}

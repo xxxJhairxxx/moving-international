@@ -1,0 +1,45 @@
+.homeSkills {
+   @apply w-[36.5rem] mx-auto mt-[-4rem];
+   z-index: 10;
+   @screen tablet {
+      @apply w-[100%];
+      z-index: 50;
+   }
+   @screen tabletxl {
+      @apply w-[90%];
+      z-index: 50;
+   }
+
+   @screen laptop {
+      @apply w-[70%];
+      z-index: 50;
+      margin-top: calc(-7rem * var(--scale));
+   }
+}
+
+.SwiperSlide {
+   @apply max-w-[17rem];
+
+   @screen tablet {
+      @apply max-w-[100%] w-full pb-7;
+   }
+   @screen laptop {
+      max-width: calc(30rem * var(--scale));
+      padding: 2%;
+   }
+}
+.swiper-pagination {
+   @apply flex justify-center mx-auto mt-[2rem];
+   width: fit-content;
+   gap: 1.1rem;
+   span {
+      @apply w-[1rem] h-[1rem] rounded-full;
+      background: rgba(7, 34, 81, 0.5);
+      &.swiper-pagination-bullet-active {
+         @apply bg-secundary;
+      }
+   }
+   @screen tablet {
+      @apply hidden;
+   }
+}

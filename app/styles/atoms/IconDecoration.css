@@ -1,0 +1,13 @@
+.iconDecoration {
+   @apply hidden;
+
+   @screen laptop {
+      @apply block absolute;
+      & > img {
+         @apply w-full h-full;
+      }
+      height: calc(19rem * var(--scale));
+      width: calc(19rem * var(--scale));
+      z-index: 30;
+   }
+}

@@ -1,0 +1,55 @@
+.homeMiddle {
+   @apply pt-[4rem] pb-[5rem] font-primary relative text-white text-center overflow-hidden;
+
+   &:after {
+      @apply absolute w-full h-full top-0 left-0 bg-center;
+      content: "";
+      z-index: -1;
+      background-image: url("/images/bg-middle.jpg");
+   }
+   &__container {
+      @apply flex flex-col w-[75%];
+      &-title {
+         @apply text-[2.4rem] font-[600] leading-[2.592rem];
+      }
+
+      &-text {
+         @apply text-[1.5m] leading-[2.32rem] mt-[0.8rem];
+      }
+
+      &-button {
+         @apply mt-[1rem] mx-auto px-[3rem] py-[0.5rem];
+      }
+
+      /* &::before {
+         @apply bg-white bottom-[-0.02rem] left-0 absolute w-full h-full;
+         content: "";
+         clip-path: polygon(31% 95%, 0% 100%, 100% 100%);
+      } */
+   }
+
+   @screen laptop {
+      @apply flex items-start justify-center;
+      padding-top: calc(8rem * var(--scale));
+      padding-bottom: calc(12rem * var(--scale));
+      z-index: 1;
+      &__container {
+         @apply items-center justify-center w-[33%];
+         &-title {
+            @apply leading-[1.4];
+            font-size: calc(3rem * var(--scale));
+            h3 {
+               @apply font-bold;
+            }
+         }
+         &-text {
+            @apply text-[1.5rem]  leading-[1.6] my-[1rem];
+            font-size: calc(2rem * var(--scale));
+         }
+         /* &::before {
+            clip-path: polygon(35% 93%, 0% 100%, 100% 100%);
+            background-color: #f8f8f8;
+         } */
+      }
+   }
+}

@@ -1,0 +1,101 @@
+.Footer {
+   @apply bg-black text-white py-[1rem] px-[1rem] text-[1.4rem] font-[300] font-primary;
+
+   white-space: nowrap;
+
+   &-ctn {
+      @apply pt-7;
+      &-list {
+         @apply font-primary flex flex-col items-start;
+
+         &-item {
+            @apply mb-7;
+            &-social {
+               gap: 0.1rem;
+
+               &::before {
+                  content: "Follow Us: ";
+                  padding-right: 1rem;
+               }
+               @apply justify-start mt-4;
+               i {
+                  @apply m-0 text-[2rem];
+               }
+            }
+            .spanish {
+               &::before {
+                  content: "Síguenos: ";
+               }
+            }
+         }
+         & &-item:nth-child(1) {
+            @apply font-[600];
+         }
+         i {
+            @apply mr-4 text-[1.6rem];
+         }
+      }
+   }
+}
+
+@screen laptop {
+   .Footer {
+      @apply items-center;
+      padding: calc(6.6rem * var(--scale));
+      padding-right: calc(1rem * var(--scale));
+
+      &-ctn {
+         @apply flex items-end justify-center p-0;
+         &-list {
+            @apply flex flex-row items-center justify-center;
+            gap: calc(11rem * var(--scale));
+            a {
+               @apply text-gris-200;
+               @apply flex items-start;
+               gap: calc(0.8rem * var(--scale));
+               font-size: calc(1.8rem * var(--scale));
+            }
+
+            &-item {
+               @apply mx-0 flex flex-nowrap items-center  font-[300] font-primary m-0;
+               font-size: calc(1.8rem * var(--scale));
+               gap: calc(0.1rem * var(--scale));
+               i {
+                  @apply text-gris-200;
+                  font-size: calc(2.3rem * var(--scale));
+               }
+
+               .socials__item-link-icon {
+                  font-size: calc(2.5rem * var(--scale));
+               }
+               &-social {
+                  @apply mt-0;
+                  order: -1;
+                  margin-top: calc(0.3rem * var(--scale));
+                  gap: calc(0.4rem * var(--scale));
+                  &:before {
+                     content: "";
+                     display: none;
+                  }
+               }
+            }
+
+            & &-item:nth-child(1) {
+               order: 3;
+               gap: calc(1rem * var(--scale));
+               a {
+                  @apply text-gris-100;
+               }
+            }
+            & &-item:nth-child(2) {
+               order: 2;
+            }
+            & &-item:nth-child(3) {
+               order: 4;
+            }
+            & &-item:nth-child(4) {
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,159 @@
+.homeAbout {
+   @apply bg-white pt-[3rem] pb-[6rem];
+
+   &__container {
+      &__thumb {
+         @apply hidden;
+      }
+
+      &__description {
+         @apply font-primary;
+         &__title {
+            @apply text-left mb-[1rem];
+         }
+         &__text {
+            @apply text-gris-300 text-[1.5rem] leading-[2.32rem];
+         }
+      }
+      &__button {
+         @apply bg-primary text-white hover:bg-primary hover:text-white py-3 px-[4rem] mt-10;
+      }
+   }
+   @screen tablet {
+      &__container {
+         @apply flex flex-col;
+         &__thumb {
+            @apply block relative mb-10;
+            height: 40rem;
+            width: 100%;
+            & > img {
+               @apply w-full h-full object-cover;
+               object-position: top;
+            }
+            &__tarjet {
+               @apply text-white absolute flex bg-primary flex-col items-center justify-center;
+               font-family: roboto;
+               height: 12rem;
+               width: 10rem;
+
+               left: calc(2.5rem * var(--scale));
+               bottom: calc(3.6rem * var(--scale));
+
+               &-iconThumb {
+                  height: 3rem;
+                  width: 3rem;
+                  & > img {
+                     @apply w-full h-full object-cover;
+                  }
+               }
+               &-number {
+                  @apply font-[700];
+                  font-size: 1.7rem;
+                  &:after {
+                     content: "+";
+                  }
+               }
+               &-text {
+                  @apply font-[400];
+                  font-size: 0.9rem;
+               }
+            }
+         }
+         &__description {
+            &__title {
+               @apply mx-0 max-w-full;
+            }
+         }
+      }
+   }
+
+   @screen tabletxl {
+      &__container {
+         @apply flex flex-col;
+         &__thumb {
+            @apply block relative mx-auto mb-10;
+            height: 45rem;
+            width: 90%;
+            & > img {
+               @apply w-full h-full object-cover;
+               object-position: top;
+            }
+         }
+      }
+   }
+   @screen laptop {
+      @apply relative;
+      padding-top: calc(7.7rem * var(--scale));
+      padding-bottom: calc(17rem * var(--scale));
+      &__container {
+         @apply grid grid-cols-2;
+         gap: calc(30rem * var(--scale));
+         &__thumb {
+            @apply block relative;
+            height: calc(50rem * var(--scale));
+            width: calc(80rem * var(--scale));
+            & > img {
+               @apply w-full h-full object-cover;
+            }
+
+            &__tarjet {
+               @apply text-white absolute flex bg-primary flex-col items-center justify-center;
+               font-family: roboto;
+               height: calc(19rem * var(--scale));
+               width: calc(16.76rem * var(--scale));
+
+               left: calc(2.5rem * var(--scale));
+               bottom: calc(3.6rem * var(--scale));
+
+               &-iconThumb {
+                  height: calc(6.8rem * var(--scale));
+                  width: calc(6.8rem * var(--scale));
+                  & > img {
+                     @apply w-full h-full object-cover;
+                  }
+               }
+               &-number {
+                  @apply font-[600] font-primary;
+                  font-size: calc(2.53rem * var(--scale));
+                  &:after {
+                     content: "+";
+                  }
+               }
+               &-text {
+                  @apply font-[400] font-primary;
+                  font-size: calc(1.28rem * var(--scale));
+               }
+            }
+         }
+
+         &__description {
+            @apply font-primary w-[85%];
+            margin-top: calc(4rem * var(--scale));
+            &__title {
+               margin-bottom: calc(1rem * var(--scale));
+               h3 {
+                  @apply leading-[130%];
+                  font-size: calc(2rem * var(--scale));
+               }
+               h2 {
+                  @apply mx-0;
+                  width: calc(45rem * var(--scale));
+                  font-size: calc(3rem * var(--scale));
+               }
+            }
+            &__text {
+               @apply text-gris-300  leading-[160%];
+               font-size: calc(1.9rem * var(--scale));
+            }
+         }
+      }
+   }
+}
+
+.homeAbout_iconbox {
+   right: calc(10rem * var(--scale));
+   bottom: calc(10rem * var(--scale));
+   z-index: 200;
+   height: calc(25rem * var(--scale));
+   width: calc(25rem * var(--scale));
+}

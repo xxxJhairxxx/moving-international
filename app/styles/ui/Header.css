@@ -1,0 +1,83 @@
+.Header {
+   @apply !sticky  w-full bg-white;
+   top: 0;
+   z-index: 100;
+   transition: background-color 0.5s ease;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+   &-ctn {
+      @apply relative flex justify-between items-center h-[6rem] w-full;
+   }
+
+   .logoCont {
+      margin-top: 2.5rem;
+      height: 8rem;
+      width: 10rem;
+      top: 0;
+      z-index: 100;
+      z-index: 100;
+      @screen laptop {
+      }
+   }
+
+   /**=======LAPTOP===============**/
+
+   @screen laptop {
+      @apply !bg-white flex items-center;
+      height: calc(9.4rem * var(--scale));
+      padding: calc(0rem * var(--scale));
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      .logoCont {
+         margin-top: calc(4rem * var(--scale));
+         width: calc(20rem * var(--scale));
+         height: calc(16rem * var(--scale));
+      }
+
+      &-ctn {
+         @apply mx-auto w-[78%];
+         height: 100%;
+         &-menu {
+            @apply ml-auto flex items-center justify-end gap-[4rem];
+            & li {
+               @apply font-primary relative cursor-pointer;
+               font-size: calc(1.8rem * var(--scale));
+               &:before {
+                  @apply bg-primary;
+                  content: "";
+                  position: absolute;
+                  z-index: -1;
+                  left: 51%;
+                  right: 51%;
+                  bottom: -10px;
+                  height: 3px;
+                  transition: left 0.3s ease-out, right 0.3s ease-out;
+               }
+               &:hover:hover:before {
+                  left: 10%;
+                  right: 10%;
+               }
+            }
+            & .isActive {
+               @apply flex items-center  rounded-[0.38rem] bg-primary px-[2.7rem] py-[1rem] font-[700] font-primary justify-center text-white;
+               transition: all 0.3s ease;
+
+               &:hover {
+                  @apply bg-secundary;
+               }
+
+               &:hover:before {
+                  display: none;
+               }
+               &:after {
+                  content: "\e904";
+                  font-family: "icomoon";
+                  font-weight: 300;
+                  margin-left: 1rem;
+                  font-size: 1rem;
+                  margin-bottom: -3px;
+               }
+            }
+         }
+      }
+   }
+}
